@@ -6,10 +6,10 @@ import connectToDatabase from './db/db.js'
 connectToDatabase()
 const app = express()
 app.use(cors({
-    origin: "https://employee-frontend-psi.vercel.app/",
+    origin: "https://employee-frontend-psi.vercel.app",
     credentials: true,
-    "Access-Control-Allow-Origin": "https://employee-frontend-psi.vercel.app",
-    "Access-Control-Allow-Origin": "*"
+    // "Access-Control-Allow-Origin": "https://employee-frontend-psi.vercel.app",
+    // "Access-Control-Allow-Origin": "*"
 }))
 app.use(express.json())
 app.use('/api/auth', authRouter)

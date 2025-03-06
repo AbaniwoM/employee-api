@@ -13,7 +13,11 @@ app.use(cors({
 }))
 app.use(express.json())
 app.use('/api/auth', authRouter)
+app.get("/healthcheck", (req, res) => {
+    res.json({status:200, data:"Server is running"})
+})
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`)
 })
+

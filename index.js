@@ -7,7 +7,7 @@ connectToDatabase()
 const app = express()
 app.use(cors({
     origin: "https://employee-frontend-psi.vercel.app/",
-    credentials: true
+    credentials: true,
 }))
 app.use(express.json())
 app.use('/api/auth', authRouter)
